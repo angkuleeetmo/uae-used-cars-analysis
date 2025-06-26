@@ -10,6 +10,7 @@ A machine learning project to predict the price of used cars in the United Arab 
 
 
 ![UAE Car Market Banner]([https://images.unsplash.com/photo-1594052138541-08a6d17b414e?q=80&w=2070&auto=format&fit=crop](https://unsplash.com/photos/assorted-color-car-lot-48lEHdLa-nQ))
+![UAE Car Market Banner](images/usedcars.png)
 *<small>Photo by [Markus Spiske](https://unsplash.com/@markusspiske) on [Unsplash](https://unsplash.com/)</small>*
 
 
