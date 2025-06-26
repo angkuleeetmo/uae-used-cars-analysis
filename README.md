@@ -9,6 +9,10 @@ Made for my Data Science Portfolio Project requirement.
 A machine learning project to predict the price of used cars in the United Arab Emirates. This project was developed as a data science portfolio piece to demonstrate a complete workflow from data exploration to model evaluation and interpretation.
 
 
+![UAE Car Market Banner](https://images.unsplash.com/photo-1594052138541-08a6d17b414e?q=80&w=2070&auto=format&fit=crop)
+*<small>Photo by [Markus Spiske](https://unsplash.com/@markusspiske) on [Unsplash](https://unsplash.com/)</small>*
+
+
 ## 📖 Table of Contents
 
 - [🎯 About The Project](#-about-the-project)
