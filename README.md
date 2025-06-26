@@ -4,6 +4,8 @@
 ![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-orange?style=for-the-badge&logo=scikitlearn)
 ![Pandas](https://img.shields.io/badge/Pandas-2.x-yellow?style=for-the-badge&logo=pandas)
 
+Made for my Data Science Portfolio Project requirement.
+
 A machine learning project to predict the price of used cars in the United Arab Emirates. This project was developed as a data science portfolio piece to demonstrate a complete workflow from data exploration to model evaluation and interpretation.
 
 
@@ -43,7 +45,7 @@ The EDA clearly shows that Japanese and German brands like Toyota, Nissan, and M
 
 #### Feature Correlation Heatmap
 The heatmap highlights the strong negative correlation between `Price` and `Mileage` (-0.46) and the strong positive correlation between `Price` and `Year` (0.33).
-![Correlation Heatmap](images/correlation_heatmap.png)
+
 
 ## 🚀 Getting Started
 
