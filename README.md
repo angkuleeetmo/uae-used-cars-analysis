@@ -1,4 +1,4 @@
-# 🚗 UAE Used Car Price Prediction
+# 🚗 UAE Used Car Price Prediction  - Jovs / CS Elective 4
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
 ![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-orange?style=for-the-badge&logo=scikitlearn)
