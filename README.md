@@ -1,134 +1,115 @@
-# UAE Used Car Price Analysis
+# 🚗 UAE Used Car Price Prediction
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
-![Pandas](https://img.shields.io/badge/Pandas-2.x-yellow)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-green)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
+![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.x-orange?style=for-the-badge&logo=scikitlearn)
+![Pandas](https://img.shields.io/badge/Pandas-2.x-yellow?style=for-the-badge&logo=pandas)
 
-An exploratory data analysis (EDA) project on the used car market in the United Arab Emirates. This analysis aims to uncover pricing trends, brand popularity, and the impact of key vehicle features like mileage and age on resale value.
+A machine learning project to predict the price of used cars in the United Arab Emirates. This project was developed as a data science portfolio piece to demonstrate a complete workflow from data exploration to model evaluation and interpretation.
 
+![Feature Importance Plot](images/feature_importance.png)
 
-## About The Project
+## 📖 Table of Contents
 
-This project performs a comprehensive analysis of over 10,000 used car listings from the UAE. The goal is to provide actionable insights for both buyers and sellers in the market. By cleaning, exploring, and visualizing the data, we can answer key questions about the factors that drive used car prices.
+- [🎯 About The Project](#-about-the-project)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📊 Key Visualizations](#-key-visualizations)
+- [🚀 Getting Started](#-getting-started)
+- [🤖 Model Performance](#-model-performance)
+- [🏁 Conclusion](#-conclusion)
+- [📝 License](#-license)
 
-The main objectives of this analysis are to:
-*   Clean and preprocess the raw dataset to make it suitable for analysis.
-*   Analyze the distribution of key features such as Price, Mileage, and Year.
-*   Identify the most popular car brands, models, and body types in the UAE market.
-*   Explore the relationships between car price and its most influential features.
-*   Investigate how prices differ across major cities like Dubai, Abu Dhabi, and Sharjah.
+## 🎯 About The Project
 
-## Dataset
+The goal of this project is to build a reliable machine learning model that can predict the resale value of a used car in the UAE based on its specifications. By analyzing a dataset of over 2,500 cleaned vehicle listings, this project provides actionable insights for both buyers and sellers in the dynamic UAE automotive market.
 
-The dataset was aggregated from various UAE car platforms in March 2025 and contains 10,000 listings. It is publicly available on GitHub.
+**Key objectives include:**
+-   Cleaning and preprocessing a real-world dataset of used car listings.
+-   Conducting Exploratory Data Analysis (EDA) to uncover market trends and feature relationships.
+-   Engineering categorical and numerical features for a regression model.
+-   Training and evaluating a Random Forest Regressor to predict car prices.
+-   Analyzing feature importances to understand what drives car valuation in the UAE.
 
-*   **Source:** [mido-saad/uae-car-analsis](https://github.com/midosaad254/uae-car-analsis)
+## 🛠️ Tech Stack
 
-### Column Descriptions
-*   **Make**: The brand of the car (e.g., Toyota, Nissan).
-*   **Model**: The specific model of the car (e.g., Camry, Patrol).
-*   **Year**: Manufacturing year of the car.
-*   **Price**: Listing price in AED (United Arab Emirates Dirham).
-*   **Mileage**: Total distance driven in kilometers.
-*   **Body Type**: The vehicle's body style (e.g., Sedan, SUV).
-*   **Cylinders**: Number of engine cylinders.
-*   **Transmission**: Gearbox type (e.g., Automatic, Manual).
-*   **Fuel Type**: The type of fuel the car uses (e.g., Gasoline, Diesel).
-*   **Color**: Exterior color of the car.
-*   **Location**: The emirate where the car is listed (e.g., Dubai, Abu Dhabi).
-*   **Description**: Seller's text description, often including features and condition.
+This project is built using the following core Python libraries for data science:
+*   **Pandas:** For data manipulation, cleaning, and preparation.
+*   **Matplotlib & Seaborn:** For creating high-quality data visualizations.
+*   **Scikit-learn:** For building and evaluating the machine learning model.
 
-## Tech Stack
+## 📊 Key Visualizations
 
-This project is built using the following core data science libraries:
-*   **Python:** The primary programming language.
-*   **Pandas:** For data manipulation and cleaning.
-*   **Matplotlib & Seaborn:** For data visualization.
-
-## Getting Started
-
-To get a local copy up and running, follow these simple steps.
-
-### Prerequisites
-
-You need to have Python 3.8+ and pip installed on your system.
-
-### Installation
-
-1.  **Clone the repo**
-    ```sh
-    git clone https://github.com/your_username/your_repository_name.git
-    cd your_repository_name
-    ```
-2.  **Create and activate a virtual environment (recommended)**
-    ```sh
-    # For Windows
-    python -m venv venv
-    .\venv\Scripts\activate
-
-    # For macOS/Linux
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-3.  **Install the required packages**
-    ```sh
-    pip install -r requirements.txt
-    ```
-    *(You will need to create a `requirements.txt` file containing `pandas`, `matplotlib`, and `seaborn`)*.
-
-4.  **Run the analysis script**
-    ```sh
-    python used_car_analysis.py
-    ```
-    This will print statistical summaries to the console and save all generated plots to the `images/` directory.
-
-## Exploratory Data Analysis (EDA)
-
-The EDA reveals several key trends in the UAE's used car market.
-
-### Key Visualizations
-
-**1. Top 15 Most Listed Car Brands**
-<br>Toyota, Nissan, and Mercedes-Benz are the most frequently listed brands, indicating their dominance and high turnover in the second-hand market.
+#### Top 15 Most Listed Car Brands
+The EDA clearly shows that Japanese and German brands like Toyota, Nissan, and Mercedes-Benz dominate the used car market.
 ![Top Brands](images/top_15_brands.png)
 
-**2. Price vs. Manufacturing Year**
-<br>There is a clear positive trend: newer cars command higher prices. A noticeable drop occurs for cars older than 10-15 years.
-![Price vs. Year](images/price_vs_year.png)
+#### Feature Correlation Heatmap
+The heatmap highlights the strong negative correlation between `Price` and `Mileage` (-0.46) and the strong positive correlation between `Price` and `Year` (0.33).
+![Correlation Heatmap](images/correlation_heatmap.png)
 
-**3. Price vs. Mileage**
-<br>As expected, there is a strong negative correlation between mileage and price. Cars with lower mileage are significantly more expensive.
-![Price vs. Mileage](images/price_vs_mileage.png)
+## 🚀 Getting Started
 
-**4. Price Distribution by Location**
-<br>Dubai shows the widest price range and the highest median price, suggesting a larger market for both budget-friendly and high-end luxury cars compared to other emirates.
-![Price by Location](images/price_by_location.png)
+Follow these simple steps to set up and run this project on your local machine.
 
-## Model Training & Results (Future Work)
+### Prerequisites
+Ensure you have **Python 3.8+** and `pip` installed on your system.
 
-The EDA strongly supports the hypothesis that a car's `Year`, `Mileage`, and `Make` are primary drivers of its price. The next logical step for this project is to build a predictive model.
+### Installation & Usage
 
-A potential approach would be:
-1.  **Feature Engineering:**
-    *   One-hot encode categorical features like `Make`, `Body Type`, and `Location`.
-    *   Extract condition information (e.g., 'accident history', 'engine repaired') from the `Description` column.
-2.  **Model Selection:**
-    *   Train a baseline **Linear Regression** model to understand linear relationships.
-    *   Implement a more powerful model like **Gradient Boosting** (e.g., XGBoost, LightGBM) or a **Random Forest Regressor** to capture non-linear patterns and provide feature importance scores.
-3.  **Evaluation:**
-    *   Evaluate model performance using metrics like Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R²).
+1.  **Clone the Repository**
+    ```sh
+    git clone https://github.com/your_username/uae-used-cars-analysis.git
+    cd uae-used-cars-analysis
+    ```
+    *(Remember to replace `your_username/uae-used-cars-analysis` with your actual GitHub repository link.)*
 
-## Conclusion
+2.  **Create a Virtual Environment** (Recommended)
+    *   On Windows:
+        ```sh
+        python -m venv venv
+        .\venv\Scripts\activate
+        ```
+    *   On macOS/Linux:
+        ```sh
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
 
-This analysis provides a clear overview of the UAE used car market based on the provided dataset. The key takeaways are:
+3.  **Install Required Libraries**
+    ```sh
+    pip install pandas matplotlib seaborn scikit-learn
+    ```
 
-*   **Market Leaders:** Japanese and German brands, particularly Toyota, Nissan, and Mercedes-Benz, are the most prevalent.
-*   **Price Determinants:** A car's age (`Year`) and `Mileage` are the two most critical factors influencing its price, as shown by the strong correlations.
-*   **Regional Differences:** Car prices and availability vary by location, with Dubai being the largest and most diverse market.
+4.  **Place the Dataset**
+    <br>Download the `UAE_Used_Cars_Dataset.csv` file and ensure it is in the root directory of the project.
 
-The initial hypothesis that a car's year, mileage, and brand are the most significant predictors of its price is strongly supported by the data visualizations.
+5.  **Run the Main Script**
+    ```sh
+    python price_prediction_model.py
+    ```
+    The script will execute the entire pipeline, print key information to the console, and save all generated plots to the `images/` folder.
 
-## License
+## 🤖 Model Performance
 
-Distributed under the MIT License. See `LICENSE` for more information.
+A **Random Forest Regressor** was trained to predict car prices. Its performance on unseen test data was evaluated using standard regression metrics.
+
+| Metric                      | Score              |
+| --------------------------- | ------------------ |
+| **R-squared (R²)**          | **0.932**          |
+| Out-of-Bag (OOB) Score      | 0.929              |
+| **Mean Absolute Error (MAE)** | **40,022.61 AED**  |
+
+An **R-squared score of 0.932** indicates that the model successfully explains over 93% of the variance in car prices, demonstrating a very strong predictive capability. The MAE shows that, on average, the model's price prediction is off by approximately 40,000 AED.
+
+## 🏁 Conclusion
+
+This project successfully developed an accurate model for predicting used car prices in the UAE.
+
+-   **Key Predictors:** The model confirmed that a car's **Year** of manufacture and its **Mileage** are by far the most influential factors in determining its resale value.
+-   **Brand Impact:** High-end brands like `porsche`, `land-rover`, and `mercedes-benz` also contribute significantly to higher price predictions.
+-   **Practical Application:** This model serves as a powerful tool for buyers to verify fair pricing and for sellers to position their vehicles competitively in the market.
+
+Future work could enhance the model by incorporating NLP on the `Description` text to extract condition details (e.g., 'accident history') and by tuning the model's hyperparameters for even greater accuracy.
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
