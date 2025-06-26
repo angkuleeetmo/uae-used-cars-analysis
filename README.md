@@ -8,7 +8,6 @@
 
 An exploratory data analysis (EDA) project on the used car market in the United Arab Emirates. This analysis aims to uncover pricing trends, brand popularity, and the impact of key vehicle features like mileage and age on resale value.
 
-![Correlation Heatmap](images/correlation_heatmap.png)
 
 ## About The Project
 
