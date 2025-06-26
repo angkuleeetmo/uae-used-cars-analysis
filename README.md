@@ -3,7 +3,6 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![Pandas](https://img.shields.io/badge/Pandas-2.x-yellow)
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-3.x-green)
-![Seaborn](https://img.shields.io/badge/Seaborn-0.13.x-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 An exploratory data analysis (EDA) project on the used car market in the United Arab Emirates. This analysis aims to uncover pricing trends, brand popularity, and the impact of key vehicle features like mileage and age on resale value.
