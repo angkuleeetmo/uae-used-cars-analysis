@@ -6,7 +6,6 @@
 
 A machine learning project to predict the price of used cars in the United Arab Emirates. This project was developed as a data science portfolio piece to demonstrate a complete workflow from data exploration to model evaluation and interpretation.
 
-![Feature Importance Plot](images/feature_importance.png)
 
 ## 📖 Table of Contents
 
